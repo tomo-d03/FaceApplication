@@ -16,6 +16,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
+        title:Text('HOME'),
         backgroundColor: Colors.grey[900],
         actions: [
           IconButton(
@@ -29,6 +30,22 @@ class HomePage extends StatelessWidget {
         "LOGGED IN AS: " + user.email!,
         style: TextStyle(fontSize: 20),
       )),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat_rounded),
+            label: 'Chat',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle_rounded),
+            label: 'MyPage',
+          ),
+        ],
+      ),
     );
   }
 }
